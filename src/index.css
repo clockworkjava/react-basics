@@ -21,5 +21,6 @@ body {
 }
 
 .adminPanel {
-  background-color: tan;
+  background-color: black;
+  padding: 10px;
 }
