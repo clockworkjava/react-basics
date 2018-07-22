@@ -15,10 +15,9 @@ describe('Inventory tests', () => {
         ReactDOM.unmountComponentAtNode(div);
     })
 
-    it('Inwentarz renders', () => {
+    it('Snapshot matches', () => {
         const wrapper = shallow(<Inventory/>);
-        // console.log(wrapper.debug());
-        expect(wrapper.find('div').text()).toBe('Inwentarz');
+        expect(wrapper).toMatchSnapshot();
     })
 
 })

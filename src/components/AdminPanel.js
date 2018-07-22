@@ -17,7 +17,7 @@ class AdminPanel extends React.Component {
                     </div>
                     <div className="form-group">
                         <input type="checkbox" id="onStock" name="onStock" className="form-check-input"/>
-                        <label for="onStock" className="form-check-label">On stock</label>
+                        <label htmlFor="onStock" className="form-check-label">On stock</label>
                     </div>
                     <div className="form-group">
                         <input type="text" placeholder="Book image" id="image" name="image" className="form-control"/>
