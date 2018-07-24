@@ -8,6 +8,25 @@ import '../index.css';
 
 class App extends React.Component {
 
+    constructor() {
+        super();
+        this.state = {
+            books : []
+        }
+    }
+
+    addNewBook = (book) => {
+
+        let newBooks = [...this.state.books];
+
+        newBooks.push(book);
+
+        this.setState({
+            books : newBooks
+        });
+
+    }
+
     render() {
         return (
             <div className="app container">
@@ -15,7 +34,7 @@ class App extends React.Component {
                 <div className="row">
                     <Order />
                     <Inventory />
-                    <AdminPanel />
+                    <AdminPanel books={this.state.books} addBook={this.addNewBook}/>
                 </div>
             </div>
         )
