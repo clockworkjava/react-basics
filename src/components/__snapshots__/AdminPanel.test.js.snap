@@ -17,7 +17,9 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <form>
+      "children": <form
+        onSubmit={[Function]}
+>
         <div
                 className="form-group"
         >
@@ -25,8 +27,10 @@ ShallowWrapper {
                         className="form-control"
                         id="name"
                         name="name"
+                        onChange={[Function]}
                         placeholder="Book name"
                         type="text"
+                        value=""
                 />
         </div>
         <div
@@ -36,8 +40,10 @@ ShallowWrapper {
                         className="form-control"
                         id="author"
                         name="author"
+                        onChange={[Function]}
                         placeholder="Book author"
                         type="text"
+                        value=""
                 />
         </div>
         <div
@@ -47,7 +53,9 @@ ShallowWrapper {
                         className="form-control"
                         id="description"
                         name="description"
+                        onChange={[Function]}
                         placeholder="Book description"
+                        value=""
                 />
         </div>
         <div
@@ -57,7 +65,9 @@ ShallowWrapper {
                         className="form-check-input"
                         id="onStock"
                         name="onStock"
+                        onChange={[Function]}
                         type="checkbox"
+                        value={true}
                 />
                 <label
                         className="form-check-label"
@@ -73,8 +83,10 @@ ShallowWrapper {
                         className="form-control"
                         id="image"
                         name="image"
+                        onChange={[Function]}
                         placeholder="Book image"
                         type="text"
+                        value=""
                 />
         </div>
         <button
@@ -100,8 +112,10 @@ ShallowWrapper {
                         className="form-control"
                         id="name"
                         name="name"
+                        onChange={[Function]}
                         placeholder="Book name"
                         type="text"
+                        value=""
             />
 </div>,
           <div
@@ -111,8 +125,10 @@ ShallowWrapper {
                         className="form-control"
                         id="author"
                         name="author"
+                        onChange={[Function]}
                         placeholder="Book author"
                         type="text"
+                        value=""
             />
 </div>,
           <div
@@ -122,7 +138,9 @@ ShallowWrapper {
                         className="form-control"
                         id="description"
                         name="description"
+                        onChange={[Function]}
                         placeholder="Book description"
+                        value=""
             />
 </div>,
           <div
@@ -132,7 +150,9 @@ ShallowWrapper {
                         className="form-check-input"
                         id="onStock"
                         name="onStock"
+                        onChange={[Function]}
                         type="checkbox"
+                        value={true}
             />
             <label
                         className="form-check-label"
@@ -148,8 +168,10 @@ ShallowWrapper {
                         className="form-control"
                         id="image"
                         name="image"
+                        onChange={[Function]}
                         placeholder="Book image"
                         type="text"
+                        value=""
             />
 </div>,
           <button
@@ -159,6 +181,7 @@ ShallowWrapper {
             Add
 </button>,
         ],
+        "onSubmit": [Function],
       },
       "ref": null,
       "rendered": Array [
@@ -171,8 +194,10 @@ ShallowWrapper {
               className="form-control"
               id="name"
               name="name"
+              onChange={[Function]}
               placeholder="Book name"
               type="text"
+              value=""
 />,
             "className": "form-group",
           },
@@ -185,8 +210,10 @@ ShallowWrapper {
               "className": "form-control",
               "id": "name",
               "name": "name",
+              "onChange": [Function],
               "placeholder": "Book name",
               "type": "text",
+              "value": "",
             },
             "ref": null,
             "rendered": null,
@@ -203,8 +230,10 @@ ShallowWrapper {
               className="form-control"
               id="author"
               name="author"
+              onChange={[Function]}
               placeholder="Book author"
               type="text"
+              value=""
 />,
             "className": "form-group",
           },
@@ -217,8 +246,10 @@ ShallowWrapper {
               "className": "form-control",
               "id": "author",
               "name": "author",
+              "onChange": [Function],
               "placeholder": "Book author",
               "type": "text",
+              "value": "",
             },
             "ref": null,
             "rendered": null,
@@ -235,7 +266,9 @@ ShallowWrapper {
               className="form-control"
               id="description"
               name="description"
+              onChange={[Function]}
               placeholder="Book description"
+              value=""
 />,
             "className": "form-group",
           },
@@ -248,7 +281,9 @@ ShallowWrapper {
               "className": "form-control",
               "id": "description",
               "name": "description",
+              "onChange": [Function],
               "placeholder": "Book description",
+              "value": "",
             },
             "ref": null,
             "rendered": null,
@@ -266,7 +301,9 @@ ShallowWrapper {
                 className="form-check-input"
                 id="onStock"
                 name="onStock"
+                onChange={[Function]}
                 type="checkbox"
+                value={true}
 />,
               <label
                 className="form-check-label"
@@ -287,7 +324,9 @@ ShallowWrapper {
                 "className": "form-check-input",
                 "id": "onStock",
                 "name": "onStock",
+                "onChange": [Function],
                 "type": "checkbox",
+                "value": true,
               },
               "ref": null,
               "rendered": null,
@@ -318,8 +357,10 @@ ShallowWrapper {
               className="form-control"
               id="image"
               name="image"
+              onChange={[Function]}
               placeholder="Book image"
               type="text"
+              value=""
 />,
             "className": "form-group",
           },
@@ -332,8 +373,10 @@ ShallowWrapper {
               "className": "form-control",
               "id": "image",
               "name": "image",
+              "onChange": [Function],
               "placeholder": "Book image",
               "type": "text",
+              "value": "",
             },
             "ref": null,
             "rendered": null,
@@ -365,7 +408,9 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": <form>
+        "children": <form
+          onSubmit={[Function]}
+>
           <div
                     className="form-group"
           >
@@ -373,8 +418,10 @@ ShallowWrapper {
                               className="form-control"
                               id="name"
                               name="name"
+                              onChange={[Function]}
                               placeholder="Book name"
                               type="text"
+                              value=""
                     />
           </div>
           <div
@@ -384,8 +431,10 @@ ShallowWrapper {
                               className="form-control"
                               id="author"
                               name="author"
+                              onChange={[Function]}
                               placeholder="Book author"
                               type="text"
+                              value=""
                     />
           </div>
           <div
@@ -395,7 +444,9 @@ ShallowWrapper {
                               className="form-control"
                               id="description"
                               name="description"
+                              onChange={[Function]}
                               placeholder="Book description"
+                              value=""
                     />
           </div>
           <div
@@ -405,7 +456,9 @@ ShallowWrapper {
                               className="form-check-input"
                               id="onStock"
                               name="onStock"
+                              onChange={[Function]}
                               type="checkbox"
+                              value={true}
                     />
                     <label
                               className="form-check-label"
@@ -421,8 +474,10 @@ ShallowWrapper {
                               className="form-control"
                               id="image"
                               name="image"
+                              onChange={[Function]}
                               placeholder="Book image"
                               type="text"
+                              value=""
                     />
           </div>
           <button
@@ -448,8 +503,10 @@ ShallowWrapper {
                             className="form-control"
                             id="name"
                             name="name"
+                            onChange={[Function]}
                             placeholder="Book name"
                             type="text"
+                            value=""
               />
 </div>,
             <div
@@ -459,8 +516,10 @@ ShallowWrapper {
                             className="form-control"
                             id="author"
                             name="author"
+                            onChange={[Function]}
                             placeholder="Book author"
                             type="text"
+                            value=""
               />
 </div>,
             <div
@@ -470,7 +529,9 @@ ShallowWrapper {
                             className="form-control"
                             id="description"
                             name="description"
+                            onChange={[Function]}
                             placeholder="Book description"
+                            value=""
               />
 </div>,
             <div
@@ -480,7 +541,9 @@ ShallowWrapper {
                             className="form-check-input"
                             id="onStock"
                             name="onStock"
+                            onChange={[Function]}
                             type="checkbox"
+                            value={true}
               />
               <label
                             className="form-check-label"
@@ -496,8 +559,10 @@ ShallowWrapper {
                             className="form-control"
                             id="image"
                             name="image"
+                            onChange={[Function]}
                             placeholder="Book image"
                             type="text"
+                            value=""
               />
 </div>,
             <button
@@ -507,6 +572,7 @@ ShallowWrapper {
               Add
 </button>,
           ],
+          "onSubmit": [Function],
         },
         "ref": null,
         "rendered": Array [
@@ -519,8 +585,10 @@ ShallowWrapper {
                 className="form-control"
                 id="name"
                 name="name"
+                onChange={[Function]}
                 placeholder="Book name"
                 type="text"
+                value=""
 />,
               "className": "form-group",
             },
@@ -533,8 +601,10 @@ ShallowWrapper {
                 "className": "form-control",
                 "id": "name",
                 "name": "name",
+                "onChange": [Function],
                 "placeholder": "Book name",
                 "type": "text",
+                "value": "",
               },
               "ref": null,
               "rendered": null,
@@ -551,8 +621,10 @@ ShallowWrapper {
                 className="form-control"
                 id="author"
                 name="author"
+                onChange={[Function]}
                 placeholder="Book author"
                 type="text"
+                value=""
 />,
               "className": "form-group",
             },
@@ -565,8 +637,10 @@ ShallowWrapper {
                 "className": "form-control",
                 "id": "author",
                 "name": "author",
+                "onChange": [Function],
                 "placeholder": "Book author",
                 "type": "text",
+                "value": "",
               },
               "ref": null,
               "rendered": null,
@@ -583,7 +657,9 @@ ShallowWrapper {
                 className="form-control"
                 id="description"
                 name="description"
+                onChange={[Function]}
                 placeholder="Book description"
+                value=""
 />,
               "className": "form-group",
             },
@@ -596,7 +672,9 @@ ShallowWrapper {
                 "className": "form-control",
                 "id": "description",
                 "name": "description",
+                "onChange": [Function],
                 "placeholder": "Book description",
+                "value": "",
               },
               "ref": null,
               "rendered": null,
@@ -614,7 +692,9 @@ ShallowWrapper {
                   className="form-check-input"
                   id="onStock"
                   name="onStock"
+                  onChange={[Function]}
                   type="checkbox"
+                  value={true}
 />,
                 <label
                   className="form-check-label"
@@ -635,7 +715,9 @@ ShallowWrapper {
                   "className": "form-check-input",
                   "id": "onStock",
                   "name": "onStock",
+                  "onChange": [Function],
                   "type": "checkbox",
+                  "value": true,
                 },
                 "ref": null,
                 "rendered": null,
@@ -666,8 +748,10 @@ ShallowWrapper {
                 className="form-control"
                 id="image"
                 name="image"
+                onChange={[Function]}
                 placeholder="Book image"
                 type="text"
+                value=""
 />,
               "className": "form-group",
             },
@@ -680,8 +764,10 @@ ShallowWrapper {
                 "className": "form-control",
                 "id": "image",
                 "name": "image",
+                "onChange": [Function],
                 "placeholder": "Book image",
                 "type": "text",
+                "value": "",
               },
               "ref": null,
               "rendered": null,
