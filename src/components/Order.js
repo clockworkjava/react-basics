@@ -10,7 +10,8 @@ class Order extends React.Component {
         })
 
         return (
-            <div className="order col-xs-4">
+            <div className="order col-xs-6">
+                <h2>Your order:</h2>
                 {orderedBooks}
             </div>
         );
