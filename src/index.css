@@ -23,6 +23,10 @@ body {
   padding: 5px;
 }
 
+.loginForm {
+  margin-top: 10px;
+}
+
 .goToAdmin {
   float: right;
 }
