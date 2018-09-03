@@ -1,0 +1,37 @@
+<html>
+    <head></head>
+    <body>
+        <div>
+            <label for="first">a:</label>
+            <input id="first" type="number"/>
+            <label for="second">b:</label>
+            <input id="second" type="number"/>
+        </div>
+        <div>
+            <button id="add">Add(+)</button>
+            <button id="multiply">Multiply(*)</button>
+        </div>
+        <script>
+            let a;
+            let b;
+
+            const inputA = document.querySelector('#first');
+            const inputB = document.querySelector('#second');
+
+            const buttonAdd = document.querySelector('#add');
+            const buttonMultiply = document.querySelector('#multiply');
+
+            handleAUpdate = (event) => a = inputA.value;
+            handleBUpdate = (event) => b = inputB.value;
+
+            handleAddition = (event) => console.log(Number(a)+Number(b));
+            handleMultiplication = (event) => console.log(a*b);
+
+            inputA.addEventListener('change', handleAUpdate);
+            inputB.addEventListener('change', handleBUpdate);
+
+            buttonAdd.addEventListener('click', handleAddition);
+            buttonMultiply.addEventListener('click', handleMultiplication);
+        </script>
+    </body>
+</html>
