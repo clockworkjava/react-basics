@@ -1,12 +1,10 @@
 import React from 'react';
-import {fbase} from '../fbase';
 
 class AddBookForm extends React.Component {
 
     constructor() {
         super();
         this.state = {
-            books : [],
             book: {
                 name: "",
                 author: "",
@@ -15,17 +13,6 @@ class AddBookForm extends React.Component {
                 image: ""
             }
         };
-    }
-
-    componentDidMount() {
-        this.ref = fbase.syncState('bookstore/books',{
-            context: this,
-            state: 'books'
-        });
-    }
-
-   componentWillUnmount() {
-       fbase.removeBinding(this.ref);
     }
 
     handleChange = (event) => {
@@ -55,8 +42,9 @@ class AddBookForm extends React.Component {
 
         let newBook = { ...this.state.book };
 
+        this.props.addNewBook(newBook);
+
         this.setState({
-            books : [...this.state.books, newBook],
             book : {
                 name: "",
                 author: "",
