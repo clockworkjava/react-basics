@@ -28,11 +28,7 @@ ShallowWrapper {
           />
           <Inventory
                     addToOrder={[Function]}
-                    books={Array []}
-          />
-          <AdminPanel
-                    addBook={[Function]}
-                    books={Array []}
+                    books={undefined}
           />
 </div>,
       ],
@@ -61,11 +57,7 @@ ShallowWrapper {
 />,
             <Inventory
               addToOrder={[Function]}
-              books={Array []}
-/>,
-            <AdminPanel
-              addBook={[Function]}
-              books={Array []}
+              books={undefined}
 />,
           ],
           "className": "row",
@@ -90,19 +82,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "addToOrder": [Function],
-              "books": Array [],
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "addBook": [Function],
-              "books": Array [],
+              "books": undefined,
             },
             "ref": null,
             "rendered": null,
@@ -131,11 +111,7 @@ ShallowWrapper {
             />
             <Inventory
                         addToOrder={[Function]}
-                        books={Array []}
-            />
-            <AdminPanel
-                        addBook={[Function]}
-                        books={Array []}
+                        books={undefined}
             />
 </div>,
         ],
@@ -164,11 +140,7 @@ ShallowWrapper {
 />,
               <Inventory
                 addToOrder={[Function]}
-                books={Array []}
-/>,
-              <AdminPanel
-                addBook={[Function]}
-                books={Array []}
+                books={undefined}
 />,
             ],
             "className": "row",
@@ -193,19 +165,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "addToOrder": [Function],
-                "books": Array [],
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "addBook": [Function],
-                "books": Array [],
+                "books": undefined,
               },
               "ref": null,
               "rendered": null,

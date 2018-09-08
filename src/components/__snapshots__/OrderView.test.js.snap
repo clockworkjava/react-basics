@@ -24,17 +24,25 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <span>
-          Book title
-</span>,
-        <button
-          className="btn btn-danger"
-          onClick={[Function]}
+        <div
+          className="col-xs-8"
 >
-          Remove
-</button>,
+          <span>
+                    Book title
+          </span>
+</div>,
+        <div
+          className="col-xs-4"
+>
+          <button
+                    className="btn btn-danger"
+                    onClick={[Function]}
+          >
+                    Remove
+          </button>
+</div>,
       ],
-      "className": "orderView",
+      "className": "orderView row",
     },
     "ref": null,
     "rendered": Array [
@@ -43,50 +51,13 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Book title",
-        },
-        "ref": null,
-        "rendered": "Book title",
-        "type": "span",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Remove",
-          "className": "btn btn-danger",
-          "onClick": [Function],
-        },
-        "ref": null,
-        "rendered": "Remove",
-        "type": "button",
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <span>
+          "children": <span>
             Book title
 </span>,
-          <button
-            className="btn btn-danger"
-            onClick={[Function]}
->
-            Remove
-</button>,
-        ],
-        "className": "orderView",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
+          "className": "col-xs-8",
+        },
+        "ref": null,
+        "rendered": Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
@@ -97,7 +68,23 @@ ShallowWrapper {
           "rendered": "Book title",
           "type": "span",
         },
-        Object {
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <button
+            className="btn btn-danger"
+            onClick={[Function]}
+>
+            Remove
+</button>,
+          "className": "col-xs-4",
+        },
+        "ref": null,
+        "rendered": Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
@@ -109,6 +96,93 @@ ShallowWrapper {
           "ref": null,
           "rendered": "Remove",
           "type": "button",
+        },
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="col-xs-8"
+>
+            <span>
+                        Book title
+            </span>
+</div>,
+          <div
+            className="col-xs-4"
+>
+            <button
+                        className="btn btn-danger"
+                        onClick={[Function]}
+            >
+                        Remove
+            </button>
+</div>,
+        ],
+        "className": "orderView row",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <span>
+              Book title
+</span>,
+            "className": "col-xs-8",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Book title",
+            },
+            "ref": null,
+            "rendered": "Book title",
+            "type": "span",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <button
+              className="btn btn-danger"
+              onClick={[Function]}
+>
+              Remove
+</button>,
+            "className": "col-xs-4",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Remove",
+              "className": "btn btn-danger",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Remove",
+            "type": "button",
+          },
+          "type": "div",
         },
       ],
       "type": "div",
