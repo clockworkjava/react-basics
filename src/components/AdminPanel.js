@@ -28,6 +28,12 @@ class AdminPanel extends React.Component {
        fbase.removeBinding(this.ref);
     }
 
+    removeFromInventory = (title) => {
+        this.setState({
+            books : this.state.books.filter( book => title!==book.name )
+        })
+    }
+
     render() {
 
         return (
@@ -38,7 +44,7 @@ class AdminPanel extends React.Component {
                 {this.state.loggedIn && 
                     <React.Fragment>
                         <AddBookForm addNewBook={this.addNewBook}/>
-                        <AdminBookListing books={this.state.books}/>
+                        <AdminBookListing books={this.state.books} removeFromInventory={this.removeFromInventory}/>
                     </React.Fragment>
                 }
             </div>
