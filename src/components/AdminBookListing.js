@@ -10,7 +10,7 @@ class AdminBookListing extends React.Component {
         if(this.props.books && Array.isArray(this.props.books)) {
             list = this.props.books.map((book) => <AdminBookView book={book} 
                     removeFromInventory={this.props.removeFromInventory} 
-                    editBook = {this.props.editBook}/>);
+                    sendBookToEdit = {this.props.sendBookToEdit}/>);
         } 
 
         return (

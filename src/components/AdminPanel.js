@@ -10,13 +10,18 @@ class AdminPanel extends React.Component {
         super();
         this.state = {
             loggedIn : false,
-            editMode : false 
+            editMode : false,
+            bookToEdit : {} 
         };
     };
 
     changeLoggedIn = (newValue) => this.setState({loggedIn: newValue}) 
 
-    addNewBook = (book) => this.setState({books : [...this.state.books, book]})
+    addNewBook = (book) => this.setState({
+        books : [...this.state.books, book],
+        editMode : false,
+        bookToEdit : {}
+    })
 
     componentDidMount() {
         this.ref = fbase.syncState('bookstore/books',{
@@ -35,10 +40,23 @@ class AdminPanel extends React.Component {
         })
     }
 
-    editBook = () => {
-        this.setState({editMode: true});
+    sendBookToEdit = (bookToEdit) => {
+        this.setState({
+            editMode: true,
+            bookToEdit: bookToEdit
+        });
     }
 
+    editBook = (oldBookTitle,bookAfterEdit) => {
+        
+        const newBooks = this.state.books.filter( book => oldBookTitle!==book.name );
+
+        this.setState({
+            books : [...newBooks, bookAfterEdit],
+            editMode : false,
+            bookToEdit : {}
+        })
+    }
     render() {
 
         return (
@@ -48,11 +66,17 @@ class AdminPanel extends React.Component {
                 }
                 {this.state.loggedIn && 
                     <React.Fragment>
-                        <AddBookForm addNewBook={this.addNewBook} editMode={this.state.editMode}/>
+                        <AddBookForm 
+                            addNewBook = {this.addNewBook}    
+                            editMode = {this.state.editMode}
+                            book = {this.state.bookToEdit}
+                            editBook = {this.editBook}
+                        />
                         <AdminBookListing 
-                            books={this.state.books}
-                            removeFromInventory={this.removeFromInventory}
-                            editBook = {this.editBook}/>
+                            books = {this.state.books}
+                            removeFromInventory = {this.removeFromInventory}
+                            sendBookToEdit = {this.sendBookToEdit}
+                        />
                     </React.Fragment>
                 }
             </div>
