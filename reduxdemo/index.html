@@ -15,7 +15,8 @@
 
             let state = {
                 a : 0,
-                b : 0
+                b : 0,
+                result : 0
             }
 
             const inputA = document.querySelector('#first');
@@ -24,12 +25,33 @@
             const buttonAdd = document.querySelector('#add');
             const buttonMultiply = document.querySelector('#multiply');
 
-            handleAUpdate = (event) => state.a = inputA.value;
-            handleBUpdate = (event) => state.b = inputB.value;
+            handleAUpdate = (event) => {
 
-            handleAddition = (event) => console.log(Number(state.a)+Number(state.b));
-            handleMultiplication = (event) => console.log(state.a*state.b);
+                const updateAction = {
+                    type: "NewAValue",
+                    newValue = inputA.value
+                }
+            }
+            handleBUpdate = (event) => {
+                
+                const updateAction = {
+                    type: "NewBValue",
+                    newValue = inputB.value
+                }
+            }
 
+            handleAddition = (event) => {
+            
+                const addAction = {
+                    type: "Addition",
+                }
+            }
+
+            handleMultiplication = (event) => {
+                const multiplyAction = {
+                    type: "Multiplication"
+                }
+            }
             inputA.addEventListener('change', handleAUpdate);
             inputB.addEventListener('change', handleBUpdate);
 
