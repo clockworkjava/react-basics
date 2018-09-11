@@ -12,8 +12,11 @@
             <button id="multiply">Multiply(*)</button>
         </div>
         <script>
-            let a;
-            let b;
+
+            let state = {
+                a : 0,
+                b : 0
+            }
 
             const inputA = document.querySelector('#first');
             const inputB = document.querySelector('#second');
@@ -21,11 +24,11 @@
             const buttonAdd = document.querySelector('#add');
             const buttonMultiply = document.querySelector('#multiply');
 
-            handleAUpdate = (event) => a = inputA.value;
-            handleBUpdate = (event) => b = inputB.value;
+            handleAUpdate = (event) => state.a = inputA.value;
+            handleBUpdate = (event) => state.b = inputB.value;
 
-            handleAddition = (event) => console.log(Number(a)+Number(b));
-            handleMultiplication = (event) => console.log(a*b);
+            handleAddition = (event) => console.log(Number(state.a)+Number(state.b));
+            handleMultiplication = (event) => console.log(state.a*state.b);
 
             inputA.addEventListener('change', handleAUpdate);
             inputB.addEventListener('change', handleBUpdate);
