@@ -11,7 +11,13 @@ class AdminPanel extends React.Component {
         this.state = {
             loggedIn : false,
             editMode : false,
-            bookToEdit : {} 
+            bookToEdit : {
+                name: "",
+                author: "",
+                description: "",
+                onStock: true,
+                image: ""
+            } 
         };
     };
 
@@ -20,7 +26,13 @@ class AdminPanel extends React.Component {
     addNewBook = (book) => this.setState({
         books : [...this.state.books, book],
         editMode : false,
-        bookToEdit : {}
+        bookToEdit : {
+            name: "",
+            author: "",
+            description: "",
+            onStock: true,
+            image: ""
+        }
     })
 
     componentDidMount() {
@@ -54,7 +66,13 @@ class AdminPanel extends React.Component {
         this.setState({
             books : [...newBooks, bookAfterEdit],
             editMode : false,
-            bookToEdit : {}
+            bookToEdit : {
+                name: "",
+                author: "",
+                description: "",
+                onStock: true,
+                image: ""
+            }
         })
     }
     render() {

@@ -4,8 +4,14 @@ class AddBookForm extends React.Component {
 
     constructor() {
         super();
-        this.state = { 
-            book : {}
+        this.state = {
+            book: {
+                name: "",
+                author: "",
+                description: "",
+                onStock: true,
+                image: ""
+            }
         }
     }
 
@@ -13,7 +19,7 @@ class AddBookForm extends React.Component {
 
         let newBook;
 
-        if(event.target.name==="onStock") {
+        if (event.target.name === "onStock") {
             newBook = {
                 ...this.state.book,
                 [event.target.name]: event.target.checked
@@ -34,16 +40,24 @@ class AddBookForm extends React.Component {
 
         event.preventDefault();
 
-        if(!this.props.editMode) {
+        if (!this.props.editMode) {
 
             const newBook = { ...this.state.book };
 
             this.props.addNewBook(newBook);
 
-            this.setState({book : {}});
+            this.setState({
+                book: {
+                    name: "",
+                    author: "",
+                    description: "",
+                    onStock: true,
+                    image: ""
+                }
+            });
 
         } else {
-            
+
             const newBook = {
                 ...this.props.book,
                 ...this.state.book
@@ -51,7 +65,13 @@ class AddBookForm extends React.Component {
 
             this.props.editBook(this.props.book.name, newBook);
 
-            this.setState({book : {}});
+            this.setState({ book: {
+                name: "",
+                author: "",
+                description: "",
+                onStock: true,
+                image: ""
+            } });
         }
 
         event.target.reset();
@@ -60,7 +80,7 @@ class AddBookForm extends React.Component {
 
     render() {
 
-        const label = this.props.editMode?"Edit":"Add";
+        const label = this.props.editMode ? "Edit" : "Add";
 
         return (
             <div className="adminPanel col-xs-4">
@@ -79,7 +99,7 @@ class AddBookForm extends React.Component {
                     </div>
                     <div className="form-group">
                         <input type="checkbox" id="onStock" name="onStock" className="form-check-input"
-                            onChange={this.handleChange} value={this.state.book.onStock || this.props.book.onStock } />
+                            onChange={this.handleChange} value={this.state.book.onStock || this.props.book.onStock} />
                         <label htmlFor="onStock" className="form-check-label">On stock</label>
                     </div>
                     <div className="form-group">
