@@ -19,6 +19,24 @@
                 result : 0
             }
 
+            reducer = (state, action) => {
+                
+                switch(action.type) {
+                    case "NewAValue":
+                        return {...state, a: Number(action.newValue)};
+                    case "NewBValue":
+                        return {...state, b: Number(action.newValue)};
+                    case "Addition":
+                        return {...state, result: state.a + state.b};
+                    case "Multiplication":
+                        return {...state, result: state.a * state.b};
+                    default:
+                        console.log("Unknown action " + action.type);
+                        return state;
+                }
+
+            }
+
             const inputA = document.querySelector('#first');
             const inputB = document.querySelector('#second');
 
@@ -29,15 +47,19 @@
 
                 const updateAction = {
                     type: "NewAValue",
-                    newValue = inputA.value
+                    newValue : inputA.value
                 }
+
+                state = reducer(state, updateAction);
             }
             handleBUpdate = (event) => {
                 
                 const updateAction = {
                     type: "NewBValue",
-                    newValue = inputB.value
+                    newValue : inputB.value
                 }
+
+                state = reducer(state, updateAction);
             }
 
             handleAddition = (event) => {
@@ -45,12 +67,17 @@
                 const addAction = {
                     type: "Addition",
                 }
+
+                state = reducer(state, addAction);
+                console.log(state.result);
             }
 
             handleMultiplication = (event) => {
                 const multiplyAction = {
                     type: "Multiplication"
                 }
+                state = reducer(state, multiplyAction);
+                console.log(state.result);
             }
             inputA.addEventListener('change', handleAUpdate);
             inputB.addEventListener('change', handleBUpdate);
