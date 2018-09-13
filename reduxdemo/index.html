@@ -39,7 +39,7 @@
 
             }
 
-            Redux.createStore(reducer);
+            const store = Redux.createStore(reducer);
 
             const inputA = document.querySelector('#first');
             const inputB = document.querySelector('#second');
@@ -54,7 +54,7 @@
                     newValue : inputA.value
                 }
 
-                state = reducer(state, updateAction);
+                store.dispatch(updateAction);
             }
             handleBUpdate = (event) => {
                 
@@ -63,7 +63,7 @@
                     newValue : inputB.value
                 }
 
-                state = reducer(state, updateAction);
+                store.dispatch(updateAction);
             }
 
             handleAddition = (event) => {
@@ -72,16 +72,16 @@
                     type: "Addition",
                 }
 
-                state = reducer(state, addAction);
-                console.log(state.result);
+                store.dispatch(addAction);
+                console.log(store.getState().result);
             }
 
             handleMultiplication = (event) => {
                 const multiplyAction = {
                     type: "Multiplication"
                 }
-                state = reducer(state, multiplyAction);
-                console.log(state.result);
+                store.dispatch(multiplyAction);
+                console.log(store.getState().result);
             }
             inputA.addEventListener('change', handleAUpdate);
             inputB.addEventListener('change', handleBUpdate);
