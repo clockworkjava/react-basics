@@ -1,5 +1,7 @@
 <html>
-    <head></head>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.0/redux.js"></script>
+    </head>
     <body>
         <div>
             <label for="first">a:</label>
@@ -13,13 +15,13 @@
         </div>
         <script>
 
-            let state = {
+            const initialState = {
                 a : 0,
                 b : 0,
                 result : 0
             }
 
-            reducer = (state, action) => {
+            reducer = (state = initialState, action) => {
                 
                 switch(action.type) {
                     case "NewAValue":
@@ -36,6 +38,8 @@
                 }
 
             }
+
+            Redux.createStore(reducer);
 
             const inputA = document.querySelector('#first');
             const inputB = document.querySelector('#second');
