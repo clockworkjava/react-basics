@@ -41,18 +41,16 @@ class AddBook extends React.Component {
 
         if (!this.props.editMode) {
 
-            const newBook = { ...this.state.book };
+            const newBook = { ...this.props.book };
 
             this.props.addNewBook(newBook);
 
-            this.setState({
-                book: {
+            this.props.updateBook({
                     name: "",
                     author: "",
                     description: "",
                     onStock: true,
                     image: ""
-                }
             });
 
         } else {
