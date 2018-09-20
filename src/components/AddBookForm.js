@@ -22,19 +22,17 @@ class AddBook extends React.Component {
 
         if (event.target.name === "onStock") {
             newBook = {
-                ...this.state.book,
+                ...this.props.book,
                 [event.target.name]: event.target.checked
             };
         } else {
             newBook = {
-                ...this.state.book,
+                ...this.props.book,
                 [event.target.name]: event.target.value
             };
         }
 
-        this.setState({
-            book: newBook
-        });
+        this.props.updateBook(newBook);
     }
 
     addNewBook = (event) => {
@@ -115,12 +113,18 @@ class AddBook extends React.Component {
 
 }
 
+const mapDispatchToProps = dispatch => {
+    return {
+        updateBook : book => dispatch({ type: 'UPDATE_BOOK', payload: book })
+    }
+}
+
 const mapStateToProps = state => {
     return {
         book : state.book
     }
 }
 
-const AddBookForm = connect(mapStateToProps)(AddBook)
+const AddBookForm = connect(mapStateToProps,mapDispatchToProps)(AddBook)
 
 export default AddBookForm;
