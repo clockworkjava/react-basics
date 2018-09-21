@@ -13,7 +13,6 @@ class AdminBookListing extends React.Component {
                             key={book.name}
                             book={book} 
                             removeFromInventory={this.props.removeFromInventory} 
-                            sendBookToEdit = {this.props.sendBookToEdit}
                         />)
             });
         } 

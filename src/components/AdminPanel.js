@@ -9,15 +9,7 @@ class AdminPanel extends React.Component {
     constructor() {
         super();
         this.state = {
-            loggedIn : false,
-            editMode : false,
-            bookToEdit : {
-                name: "",
-                author: "",
-                description: "",
-                onStock: true,
-                image: ""
-            } 
+            loggedIn : false
         };
     };
 
@@ -25,14 +17,6 @@ class AdminPanel extends React.Component {
 
     addNewBook = (book) => this.setState({
         books : [...this.state.books, book],
-        editMode : false,
-        bookToEdit : {
-            name: "",
-            author: "",
-            description: "",
-            onStock: true,
-            image: ""
-        }
     })
 
     componentDidMount() {
@@ -52,27 +36,12 @@ class AdminPanel extends React.Component {
         })
     }
 
-    sendBookToEdit = (bookToEdit) => {
-        this.setState({
-            editMode: true,
-            bookToEdit: bookToEdit
-        });
-    }
-
     editBook = (oldBookTitle,bookAfterEdit) => {
         
         const newBooks = this.state.books.filter( book => oldBookTitle!==book.name );
 
         this.setState({
             books : [...newBooks, bookAfterEdit],
-            editMode : false,
-            bookToEdit : {
-                name: "",
-                author: "",
-                description: "",
-                onStock: true,
-                image: ""
-            }
         })
     }
     render() {
@@ -86,14 +55,11 @@ class AdminPanel extends React.Component {
                     <React.Fragment>
                         <AddBookForm 
                             addNewBook = {this.addNewBook}    
-                            editMode = {this.state.editMode}
-                            book = {this.state.bookToEdit}
                             editBook = {this.editBook}
                         />
                         <AdminBookListing 
                             books = {this.state.books}
                             removeFromInventory = {this.removeFromInventory}
-                            sendBookToEdit = {this.sendBookToEdit}
                         />
                     </React.Fragment>
                 }

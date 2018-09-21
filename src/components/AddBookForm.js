@@ -3,19 +3,6 @@ import {connect} from 'react-redux';
 
 class AddBook extends React.Component {
 
-    constructor() {
-        super();
-        this.state = {
-            book: {
-                name: "",
-                author: "",
-                description: "",
-                onStock: true,
-                image: ""
-            }
-        }
-    }
-
     handleChange = (event) => {
 
         let newBook;
@@ -54,21 +41,18 @@ class AddBook extends React.Component {
             });
 
         } else {
+            
+            const newBook = { ...this.props.book };
 
-            const newBook = {
-                ...this.props.book,
-                ...this.state.book
-            }
+            this.props.editBook(this.props.titleOfBookForRemoval, newBook);
 
-            this.props.editBook(this.props.book.name, newBook);
-
-            this.setState({ book: {
+            this.props.updateBook({
                 name: "",
                 author: "",
                 description: "",
                 onStock: true,
                 image: ""
-            } });
+             });
         }
 
         event.target.reset();
@@ -119,7 +103,9 @@ const mapDispatchToProps = dispatch => {
 
 const mapStateToProps = state => {
     return {
-        book : state.book
+        book : state.book,
+        editMode : state.editMode,
+        titleOfBookForRemoval: state.titleOfBookForRemoval
     }
 }
 
