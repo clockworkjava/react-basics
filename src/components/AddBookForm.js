@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {updateBookAction} from '../store/actions';
 
 class AddBook extends React.Component {
 
@@ -97,7 +98,7 @@ class AddBook extends React.Component {
 
 const mapDispatchToProps = dispatch => {
     return {
-        updateBook : book => dispatch({ type: 'UPDATE_BOOK', payload: book })
+        updateBook : book => dispatch(updateBookAction(book))
     }
 }
 

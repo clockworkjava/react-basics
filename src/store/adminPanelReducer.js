@@ -1,3 +1,4 @@
+import {SEND_BOOK_TO_EDIT, UPDATE_BOOK} from './actions';
 
 const initialState = {
     book : {
@@ -16,10 +17,10 @@ const adminPanelReducer = (state = initialState, action) => {
     console.log("Action received " + action.type);
 
     switch(action.type) {
-        case 'UPDATE_BOOK':
+        case UPDATE_BOOK:
             const book = action.payload;
             return {...state, book};
-        case 'SEND_BOOK_TO_EDIT':
+        case SEND_BOOK_TO_EDIT:
             const bookToEdit = action.payload
             return { 
                 ...state,

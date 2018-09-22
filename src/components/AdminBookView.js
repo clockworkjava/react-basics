@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {sendBookToEditAction} from '../store/actions';
 
 class BookView extends React.Component {
 
@@ -28,10 +29,7 @@ const mapStateToProps = (state) => {
 }
 const mapDispatchToProps = (dispatch) => {
     return {
-        sendBookToEdit : (book) => dispatch({
-            type: "SEND_BOOK_TO_EDIT",
-            payload: book
-        })
+        sendBookToEdit : (book) => dispatch(sendBookToEditAction(book))
     }
 }
 
